@@ -1,0 +1,19 @@
+<div class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6"> <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"> </div>
+			<div class="col-md-6">
+				<h1>{{thing.nameIta}}</h1>
+				<h3>Codice: {{thing.name}}</h3>
+				<p>{{thing.descIta}}</p>
+				<br>
+
+				<button class="btn  btn-success col-md-6" ng-click="goToState('widgets-list-view',thing._id)">Back</button>
+
+
+				<button class="btn btn-warning col-md-6" ng-click="goToState('widget-details-edit',thing._id)">Edit</button>
+
+			</div>
+		</div>
+	</div>
+</div>

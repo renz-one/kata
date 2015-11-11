@@ -1,0 +1,71 @@
+<div class="container">
+
+	<div class="panel-body">
+		<div class="col-md-6">
+			<button class="btn col-md-6 btn-warning" ng-click="goToState('widgets-list-view',thing._id)">Back</button>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<form ng-submit="save()" name="form" novalidate="" class="form-group">
+
+						<div class="row">
+							<div class="col-md-6">
+								<label class="control-label">Codice</label>
+								<input class="form-control" type="text" ng-model="newThing.name" required/>
+							</div>
+							<!--codice di Maurone-->
+							<!--div class="col-md-6"><label class="control-label">Stato</label> {{publishState}}
+        <select class="form-control" ng-model="thing.publishState" ng-options="c.state as c.state for c in thingState" >
+										</select></div-->
+
+						
+						
+						<!-- ATTENZIONE, ALLA LISTA DI INSERIMENTO MANCANO ANCORA I PARAMETRI E GLI SCOPE DELLA SEZIONE E DEL SET - ALLO STESSO MOMENTO INSERIRE ANCHE I PARAMETRI PER LA DEFINIZIONE DEL GRAFICO-->
+						
+						{{thing.publishstate}}
+						
+
+							<div class="col-md-6">
+								<label class="control-label">Stato</label> {{publishState}}
+								<select class="form-control" ng-model="thing.publishState" required >
+									<option ng-repeat="option in thingState">{{option.state}}</option>
+
+								</select>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6">
+								<label class="control-label">Titolo Italiano</label>
+								<input class="form-control" type="text" ng-model="newThing.nameIta" required/>
+							</div>
+							<div class="col-md-6">
+								<label class="control-label">Titolo Inglese</label>
+								<input class="form-control" type="text" ng-model="newThing.nameEng" required/>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<label class="control-label">Descrizione Italiano</label>
+								<textarea rows="5" class="form-control" type="text" ng-model="newThing.descIta" required></textarea>
+							</div>
+							<div class="col-md-6">
+								<label class="control-label">Descrizione Inglese</label>
+								<textarea rows="5" class="form-control" type="text" ng-model="newThing.descEng" required></textarea>
+							</div>
+						</div>
+						<div class="row"></div>
+						
+						<input type="submit" value="Add" class="btn btn-primary" ng-disabled="!form.$valid" />
+					</form>
+				</div>
+			</div>
+		</div>
+</div>
+
+<template name="imageUpload">
+	<form action="/file-upload" class="dropzone" id="dropzone"></form>
+</template>
+{{imageUpload}}
+</div>

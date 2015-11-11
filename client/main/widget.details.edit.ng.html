@@ -1,0 +1,75 @@
+<div class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6"> <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"> </div>
+			<div class="col-md-6">
+				<h1>{{thing.nameIta}}</h1>
+				<h3>Codice: {{thing.name}}</h3>
+				<p>{{thing.descIta}}</p>
+				<br>
+				<button class="btn col-md-6 btn-success" ng-click="goToState('widgets-list-view',thing._id)">Back</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div container>
+	<div class="panel">
+		<div class="panel-body">
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<form role="form">
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-6">
+										<label class="control-label">Codice</label>
+										<input class="form-control" type="text" ng-model="thing.name" />
+									</div>
+									<!--codice di Maurone-->
+									<!--div class="col-md-6"><label class="control-label">Stato</label> {{publishState}}
+        <select class="form-control" ng-model="publishState" ng-options="c.state as c.state for c in thingState" >
+										</select></div-->
+					
+					<div class="col-md-6"><label class="control-label">Stato</label> {{publishState}}
+						<select class="form-control" ng-model="thing.publishState"><option ng-repeat="option in thingState" >{{option.state}}</option>
+										</select></div>
+            </div>
+								
+								<div class="row">
+									<div class="col-md-6">
+										<label class="control-label">Titolo Italiano</label>
+										<input class="form-control" type="text" ng-model="thing.nameIta" />
+									</div>
+									<div class="col-md-6">
+										<label class="control-label">Titolo Inglese</label>
+										<input class="form-control" type="text" ng-model="thing.nameEng" />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<label class="control-label">Descrizione Italiano</label>
+										<textarea rows="5" class="form-control" type="text" ng-model="thing.descIta"></textarea>
+									</div>
+									<div class="col-md-6">
+										<label class="control-label">Descrizione Inglese</label>
+										<textarea rows="5" class="form-control" type="text" ng-model="thing.descEng"></textarea>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<button class="btn col-md-6 btn-warning" ng-click="goToState('widgets-list-view',thing._id)">Back</button>
+            <button class="btn col-md-6 btn-danger" ng-click="remove('widgets-list-view',thing._id)">Delete</button>
+		</div>
+	</div>
+	<template name="imageUpload">
+  <form action="/file-upload" class="dropzone" id="dropzone"></form>
+</template>
+{{imageUpload}}
+</div>
