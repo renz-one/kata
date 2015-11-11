@@ -75,5 +75,27 @@ angular.module('kataApp')
 	}];
 	
 	$scope.thing.publishState = $scope.thingState[0].state;
+
+
+        $scope.checkSet = '';
+
+        $scope.checkSection = {
+            pax: false,
+            geo: false,
+            time: false,
+            rooms: false
+
+        };
+
+        $scope.checkResults = [];
+
+        $scope.$watchCollection('checkModel', function () {
+            $scope.checkResults = [];
+            angular.forEach($scope.checkModel, function (value, key) {
+                if (value) {
+                    $scope.checkResults.push(key);
+                }
+            });
+        });
 	
 		});

@@ -2,14 +2,15 @@
  * Created by renzo.rombola on 11/11/2015.
  */
 angular.module('kataApp').controller('ButtonsCtrl', function ($scope) {
-    $scope.singleModel = 1;
 
-    $scope.radioModel = 'Middle';
+    $scope.radioModel = '';
 
     $scope.checkModel = {
-        left: false,
-        middle: true,
-        right: false
+        pax: false,
+        geo: false,
+        time: false,
+        rooms: false
+
     };
 
     $scope.checkResults = [];
