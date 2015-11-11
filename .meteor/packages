@@ -31,3 +31,4 @@ accounts-ui
 cfs:standard-packages
 cfs:gridfs
 cfs:filesystem
+superchris:angular-ui-bootstrap
