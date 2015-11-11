@@ -8,7 +8,7 @@ angular.module('kataApp')
         $scope.perPage = 10;
         $scope.sort = {
             name_sort: 1
-        };
+                    };
         $scope.orderProperty = '1';
 
         $scope.things = $scope.$meteorCollection(function () {
@@ -61,6 +61,8 @@ angular.module('kataApp')
 	$scope.goToState = function (state, id) {
 		$state.go(state,{thingid:id})
 			};
+
+
 	 $scope.thing = $scope.$meteorObject(Things, $stateParams.thingid);
 	
 	
@@ -77,23 +79,22 @@ angular.module('kataApp')
 	$scope.thing.publishState = $scope.thingState[0].state;
 
 
-        $scope.checkSet = '';
+        $scope.thing.checkSet = '';
 
-        $scope.checkSection = {
+        $scope.thing.checkSection = {
             pax: false,
             geo: false,
             time: false,
             rooms: false
-
         };
 
-        $scope.checkResults = [];
+        $scope.thing.checkResults = [];
 
-        $scope.$watchCollection('checkModel', function () {
-            $scope.checkResults = [];
-            angular.forEach($scope.checkModel, function (value, key) {
+        $scope.$watchCollection('thing.checkSection', function () {
+            $scope.thing.checkResults = [];
+            angular.forEach($scope.thing.checkSection, function (value, key) {
                 if (value) {
-                    $scope.checkResults.push(key);
+                    $scope.thing.checkResults.push(key);
                 }
             });
         });
