@@ -9,7 +9,7 @@
 
 		
 			<div class="row"></div>
-			<dir-pagination-controls on-page-change="pageChanged(newPageNumber)" class="col-md-12"></dir-pagination-controls>
+			<dir-pagination-controls on-page-change="pageChanged(newPageNumber)" direction-links="true" boundary-links="true" class="col-md-12" max-size="5" ></dir-pagination-controls>
 			<div class="col-lg-12 col-md-12">
 				<input type="search" ng-model="search" placeholder="Ricerca" class="form-control" />
 			</div>
@@ -28,6 +28,7 @@
 						<th>Set</th>
 						<th>Stato</th>
 					</tr>
+
 				</thead>
 				<tr ng-class="{
                            'danger':thing.publishState=='Inserito' ,
