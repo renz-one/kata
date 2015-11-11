@@ -1,7 +1,7 @@
 angular.module('kataApp', [
   'angular-meteor',
   'ui.router',
-  'ui.bootstrap.tpls',
+  'ui.bootstrap',
   'angularUtils.directives.dirPagination'
 ]);
 
