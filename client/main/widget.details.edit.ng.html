@@ -58,14 +58,30 @@
 										<textarea rows="5" class="form-control" type="text" ng-model="thing.descEng"></textarea>
 									</div>
 								</div>
+                                <div class="row">
+                                    <div class="btn-group col-md-6">
+                                        <label class="btn btn-primary" ng-model="thing.checkSection.pax" uib-btn-checkbox>Pax</label>
+                                        <label class="btn btn-primary" ng-model="thing.checkSection.geo" uib-btn-checkbox>Geo</label>
+                                        <label class="btn btn-primary" ng-model="thing.checkSection.time" uib-btn-checkbox>Time</label>
+                                        <label class="btn btn-primary" ng-model="thing.checkSection.rooms" uib-btn-checkbox>Rooms</label>
+
+
+                                    </div>
+                                    <div class="btn-group col-md-6">
+                                        <label class="btn btn-primary" ng-model="thing.checkSet" uib-btn-radio="'Free'">Free</label>
+                                        <label class="btn btn-primary" ng-model="thing.checkSet" uib-btn-radio="'Plus'">Plus</label>
+                                        <label class="btn btn-primary" ng-model="thing.checkSet" uib-btn-radio="'Pro'">Pro</label>
+
+                                    </div>
+                                </div>
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
 
-			<button class="btn col-md-6 btn-warning" ng-click="goToState('widgets-list-view',thing._id)">Back</button>
-            <button class="btn col-md-6 btn-danger" ng-click="remove('widgets-list-view',thing._id)">Delete</button>
+			<button class="btn col-md-12 btn-warning" ng-click="goToState('widgets-list-view',thing._id)">Back</button>
+
 		</div>
 	</div>
 	<template name="imageUpload">
