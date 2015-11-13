@@ -10,6 +10,9 @@ var sectionsSchema = new SimpleSchema({
 var thingSchema = new SimpleSchema({
     'name' :{ type:String,optional:true },
     'nameIta' :{ type:String,optional:true },
+    'nameEng' :{ type:String,optional:true },
+    'descIta' :{ type:String,optional:true },
+    'descEng' :{ type:String,optional:true },
     'publishState' :{ type:String,optional:true,defaultValue:'Inserito'},
     'sections':{type: sectionsSchema,optional:true,blackbox: true},
     'set': {type:String,optional:true,defaultValue:''},

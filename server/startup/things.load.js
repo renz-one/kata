@@ -15,5 +15,6 @@ Meteor.startup(function() {
         ,name_sort: thing.toLowerCase()
       });
     });
+    console.log("loading things...")
   }
 });
