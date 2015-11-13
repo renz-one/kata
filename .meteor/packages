@@ -30,4 +30,6 @@ cfs:standard-packages
 cfs:gridfs
 cfs:filesystem
 blaze-tools
-blaze-html-templates
+civilframe:angular-jade
+aldeed:simple-schema
+aldeed:collection2

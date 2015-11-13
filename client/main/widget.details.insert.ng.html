@@ -12,25 +12,19 @@
 						<div class="row">
 							<div class="col-md-6">
 								<label class="control-label">Codice</label>
-								<input class="form-control" type="text" ng-model="newThing.name" required/>
+								<input class="form-control" type="text" ng-model="thing.name" required/>
 							</div>
 							<!--codice di Maurone-->
 							<!--div class="col-md-6"><label class="control-label">Stato</label> {{publishState}}
         <select class="form-control" ng-model="thing.publishState" ng-options="c.state as c.state for c in thingState" >
 										</select></div-->
 
-						
-						
 						<!-- ATTENZIONE, ALLA LISTA DI INSERIMENTO MANCANO ANCORA I PARAMETRI E GLI SCOPE DELLA SEZIONE E DEL SET - ALLO STESSO MOMENTO INSERIRE ANCHE I PARAMETRI PER LA DEFINIZIONE DEL GRAFICO-->
-						
-						{{thing.publishstate}}
-						
 
 							<div class="col-md-6">
 								<label class="control-label">Stato</label> {{publishState}}
 								<select class="form-control" ng-model="thing.publishState" required >
-									<option ng-repeat="option in thingState">{{option.state}}</option>
-
+									<option ng-repeat="option in thingState track by $index">{{option.state}}</option>
 								</select>
 							</div>
 						</div>
@@ -38,42 +32,35 @@
 						<div class="row">
 							<div class="col-md-6">
 								<label class="control-label">Titolo Italiano</label>
-								<input class="form-control" type="text" ng-model="newThing.nameIta" required/>
+								<input class="form-control" type="text" ng-model="thing.nameIta" required/>
 							</div>
 							<div class="col-md-6">
 								<label class="control-label">Titolo Inglese</label>
-								<input class="form-control" type="text" ng-model="newThing.nameEng" required/>
+								<input class="form-control" type="text" ng-model="thing.nameEng" required/>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-6">
 								<label class="control-label">Descrizione Italiano</label>
-								<textarea rows="5" class="form-control" type="text" ng-model="newThing.descIta" required></textarea>
+								<textarea rows="5" class="form-control" type="text" ng-model="thing.descIta" required></textarea>
 							</div>
 							<div class="col-md-6">
 								<label class="control-label">Descrizione Inglese</label>
-								<textarea rows="5" class="form-control" type="text" ng-model="newThing.descEng" required></textarea>
+								<textarea rows="5" class="form-control" type="text" ng-model="thing.descEng" required></textarea>
 							</div>
 						</div>
-                        <div class="row"></div>
+
+						<div class="row form-group">
+							<div class="btn-group col-md-6" ng-include="'client/components/things.section.buttons.ng.html'" > </div>
+							<div class="btn-group col-md-6" ng-include="'client/components/things.set.buttons.ng.html'"></div>
+						</div>
+
 						<div class="row">
-                            <div class="btn-group col-md-6">
-                                <label class="btn btn-primary" ng-model="newThing.checkSection.pax" uib-btn-checkbox>Pax</label>
-                                <label class="btn btn-primary" ng-model="newThing.checkSection.geo" uib-btn-checkbox>Geo</label>
-                                <label class="btn btn-primary" ng-model="newThing.checkSection.time" uib-btn-checkbox>Time</label>
-                                <label class="btn btn-primary" ng-model="newThing.checkSection.rooms" uib-btn-checkbox>Rooms</label>
-
-
+                            <div class="col-md-6">
+                                <input type="submit" value="Add" class="btn btn-primary" ng-disabled="!form.$valid" />
                             </div>
-                            <div class="btn-group col-md-6">
-                                <label class="btn btn-primary" ng-model="newThing.checkSet" uib-btn-radio="'Free'">Free</label>
-                                <label class="btn btn-primary" ng-model="newThing.checkSet" uib-btn-radio="'Plus'">Plus</label>
-                                <label class="btn btn-primary" ng-model="newThing.checkSet" uib-btn-radio="'Pro'">Pro</label>
-
-                             </div>
                         </div>
-						
-						<input type="submit" value="Add" class="btn btn-primary" ng-disabled="!form.$valid" />
+
 					</form>
 				</div>
 			</div>

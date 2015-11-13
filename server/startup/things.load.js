@@ -11,10 +11,8 @@ Meteor.startup(function() {
     ];
     things.forEach(function(thing) {
       Things.insert({
-        name: thing,
-        name_sort: thing.toLowerCase(),
-        createdAt: new Date(),
-		
+        name: thing
+        ,name_sort: thing.toLowerCase()
       });
     });
   }

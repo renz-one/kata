@@ -32,7 +32,7 @@
 									<!--div class="col-md-6"><label class="control-label">Stato</label> {{publishState}}
         <select class="form-control" ng-model="publishState" ng-options="c.state as c.state for c in thingState" >
 										</select></div-->
-					
+
 					<div class="col-md-6"><label class="control-label">Stato</label> {{publishState}}
 						<select class="form-control" ng-model="thing.publishState"><option ng-repeat="option in thingState" >{{option.state}}</option>
 										</select></div>
@@ -59,20 +59,8 @@
 									</div>
 								</div>
                                 <div class="row">
-                                    <div class="btn-group col-md-6">
-                                        <label class="btn btn-primary" ng-model="thing.checkSection.pax" uib-btn-checkbox>Pax</label>
-                                        <label class="btn btn-primary" ng-model="thing.checkSection.geo" uib-btn-checkbox>Geo</label>
-                                        <label class="btn btn-primary" ng-model="thing.checkSection.time" uib-btn-checkbox>Time</label>
-                                        <label class="btn btn-primary" ng-model="thing.checkSection.rooms" uib-btn-checkbox>Rooms</label>
-
-
-                                    </div>
-                                    <div class="btn-group col-md-6">
-                                        <label class="btn btn-primary" ng-model="thing.checkSet" uib-btn-radio="'Free'">Free</label>
-                                        <label class="btn btn-primary" ng-model="thing.checkSet" uib-btn-radio="'Plus'">Plus</label>
-                                        <label class="btn btn-primary" ng-model="thing.checkSet" uib-btn-radio="'Pro'">Pro</label>
-
-                                    </div>
+                                    <div class="btn-group col-md-6" ng-include="'client/components/things.section.buttons.ng.html'" > </div>
+                                    <div class="btn-group col-md-6" ng-include="'client/components/things.set.buttons.ng.html'"></div>
                                 </div>
 							</div>
 						</form>
