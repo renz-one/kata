@@ -4,29 +4,27 @@ angular.module('kataApp')
 			$stateProvider
 				.state('widgets-list-view', {
 					url: '/',
-					templateUrl: 'client/main/widgets.list.ng.html',
+					templateUrl: 'main/things/client/widget.list.ng.html',
 					controller: 'MainListCtrl'
 				})
 
-			.state('widget-overview', {
+
+            .state('widget-overview', {
 				url: '/widget-overview/:thingid',
-				templateUrl: 'client/main/widget.overview.ng.html',
+				templateUrl: 'main/things/client/widget.overview.ng.html',
 				controller: 'MainDetailCtrl'
 			})
 
 			.state('widget-details-edit', {
 					url: '/widget-details-edit/:thingid',
-					templateUrl: 'client/main/widget.details.edit.ng.html',
+					templateUrl: 'main/things/client/widget.details.edit.ng.html',
 					controller: 'MainDetailCtrl'
 				})
-				.state('prova', {
-					url: '/prova',
-					templateUrl: 'client/main/prova.ng.html',
-					controller: 'ButtonsCtrl'
-				})
+
 				.state('widget-details-insert', {
 					url: '/widget-details-insert/:thingid',
-					templateUrl: 'client/main/widget.details.insert.ng.html',
+					templateUrl: 'main/things/client/widget.details.insert.ng.html',
 					controller: 'MainDetailCtrl'
 				});
+
 	});

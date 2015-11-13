@@ -32,4 +32,3 @@ Things.allow({
 	}
 	
 });
-

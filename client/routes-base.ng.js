@@ -11,7 +11,7 @@ angular.module('kataApp')
       case 'AUTH_REQUIRED':
       case 'FORBIDDEN':
       case 'UNAUTHORIZED':
-        $state.go('main');
+        $state.go('widgets-list-view');
         break;
     }
   });
