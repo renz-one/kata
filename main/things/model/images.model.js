@@ -15,16 +15,16 @@ Images = new FS.Collection("images", {
 if (Meteor.isServer) {
     Images.allow({
         insert: function (userId) {
-            return (userId ? true : false);
+            return true ;
         },
         remove: function (userId) {
-            return (userId ? true : false);
+            return true ;
         },
         download: function () {
             return true;
         },
         update: function (userId) {
-            return (userId ? true : false);
+            return true ;
         }
     });
 
