@@ -13,6 +13,7 @@ angular.module('kataApp')
                 'rooms' : false
             },
             'set': null,
+            'images': null,
             'createdAt': new Date()
         };
     }

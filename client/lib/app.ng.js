@@ -2,7 +2,10 @@ angular.module('kataApp', [
   'angular-meteor',
   'ui.router',
   'ui.bootstrap',
-  'angularUtils.directives.dirPagination'
+  'angularUtils.directives.dirPagination',
+    'ngMaterial',
+    'ngFileUpload',
+    'ngImgCrop'
 ]);
 
 onReady = function() {

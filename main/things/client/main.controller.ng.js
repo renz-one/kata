@@ -93,5 +93,6 @@ angular.module('kataApp')
             });
         });
 
-
+        $scope.images = $meteor.collectionFS(Images, false, Images).subscribe('images');
+        $scope.newThingImages = [];
 		});
