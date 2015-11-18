@@ -2,11 +2,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<div layout="row" class="images-container-title">
-					<div class="thing-image-container" ng-repeat="image in newThingImages">
+
+					<div class="col-md-6" ng-repeat="image in newThingImages">
 						<img ng-src="{{ image.url() }}"/><br/>
 					</div>
-				</div></div>
+
+			</div>
 			<div class="col-md-6">
 				<h1>{{thing.nameIta}}</h1>
 				<h3>Codice: {{thing.name}}</h3>

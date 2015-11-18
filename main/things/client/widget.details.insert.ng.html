@@ -14,12 +14,6 @@
 								<label class="control-label">Codice</label>
 								<input class="form-control" type="text" ng-model="thing.name" required/>
 							</div>
-							<!--codice di Maurone-->
-							<!--div class="col-md-6"><label class="control-label">Stato</label> {{publishState}}
-        <select class="form-control" ng-model="thing.publishState" ng-options="c.state as c.state for c in thingState" >
-										</select></div-->
-
-						<!-- ATTENZIONE, ALLA LISTA DI INSERIMENTO MANCANO ANCORA I PARAMETRI E GLI SCOPE DELLA SEZIONE E DEL SET - ALLO STESSO MOMENTO INSERIRE ANCHE I PARAMETRI PER LA DEFINIZIONE DEL GRAFICO-->
 
 							<div class="col-md-6">
 								<label class="control-label">Stato</label> {{publishState}}
@@ -51,8 +45,26 @@
 						</div>
 
 						<div class="row form-group">
-							<div class="btn-group col-md-6" ng-include="'client/components/things.section.buttons.ng.html'" > </div>
-							<div class="btn-group col-md-6" ng-include="'client/components/things.set.buttons.ng.html'"></div>
+							<div class="col-md-3">
+								<label class="control-label">Tipo Widget</label> {{publishType}}
+								<select class="form-control" ng-model="thing.Type" required >
+									<option ng-repeat="option in thingType for label in thing.Type">{{option.type}}</option>
+								</select>
+							</div>
+							<div class="col-md-3">
+								<label class="control-label">Dimensione</label> {{publishDim}}
+								<select class="form-control" ng-model="thing.publishDim" required >
+									<option ng-repeat="option in thingDim track by $index">{{option.dim}}</option>
+								</select>
+							</div>
+							<div class="col-md-3">
+								<label class="control-label w100">Sezione</label>
+								<div class="btn-group" ng-include="'client/components/things.section.buttons.ng.html'" > </div>
+							</div>
+							<div class="col-md-3">
+								<label class="control-label w100">Set</label>
+								<div class="btn-group" ng-include="'client/components/things.set.buttons.ng.html'"></div>
+							</div>
 						</div>
 						<div ng-controller="AddPhotoCtrl" class="row form-group">
 							<div class="btn-group col-md-12" ng-include="'client/components/things.imageuploader.ng.html'" > </div>

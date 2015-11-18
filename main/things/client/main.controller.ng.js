@@ -93,6 +93,41 @@ angular.module('kataApp')
             });
         });
 
-        $scope.images = $meteor.collectionFS(Images, false, Images).subscribe('images');
-        $scope.newThingImages = [];
+        $scope.thingType = [
+            { label: 'Istogramma',
+              value: 'chartwidget'},
+            { label: 'Progress Bar',
+                value: 'progresswidget'},
+            { label: 'Date Selector',
+                value: 'dateselectorwidget'},
+            { label: 'Form',
+                value: 'formwidget'},
+            { label: 'Griglia',
+                value: 'gridwidget'},
+            { label: 'Banner',
+                value: 'bannerwidget'},
+            { label: 'Grafico a torta',
+                value: 'piechartwidget'},
+            { label: 'Istogramma mensile',
+                value: 'monthchartwidget'}
+
+        ];
+        $scope.thing.publishType = $scope.thingType[0].label;
+
+        $scope.thingDim = [
+            { dim: '1'},
+            { dim: '2'},
+            { dim: '3'},
+            { dim: '4'},
+            { dim: '5'},
+            { dim: '6'},
+            { dim: '7'},
+            { dim: '8'},
+            { dim: '9'},
+            { dim: '10'},
+            { dim: '11'},
+            { dim: '12'}
+
+        ];
+        $scope.thing.publishDim = $scope.thingType[0].dim;
 		});
