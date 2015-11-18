@@ -1,0 +1,72 @@
+<div class="row" ng-controller="MainDetailCtrl">
+    <div class="col-md-12">
+        <form ng-submit="save()" name="form" novalidate="" class="form-group">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="control-label">Codice</label>
+                    <input class="form-control" type="text" ng-model="thing.name" required/>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="control-label">Stato</label>
+                    <select class="form-control" ng-model="thing.publishState" required >
+                        <option ng-repeat="option in thingState track by $index">{{option.state}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="control-label">Titolo Italiano</label>
+                    <input class="form-control" type="text" ng-model="thing.nameIta" required/>
+                </div>
+                <div class="col-md-6">
+                    <label class="control-label">Titolo Inglese</label>
+                    <input class="form-control" type="text" ng-model="thing.nameEng" required/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label class="control-label">Descrizione Italiano</label>
+                    <textarea rows="5" class="form-control" type="text" ng-model="thing.descIta" required></textarea>
+                </div>
+                <div class="col-md-6">
+                    <label class="control-label">Descrizione Inglese</label>
+                    <textarea rows="5" class="form-control" type="text" ng-model="thing.descEng" required></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <label class="control-label">Tipo Widget</label>
+                    <select class="form-control" ng-model="thing.publishType" required >
+                        <option ng-repeat="option in thingTypes track by $index">{{option.label}}</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="control-label">Dimensione</label>
+                    <select class="form-control" ng-model="thing.publishDim" required >
+                        <option ng-repeat="option in thingDims track by $index">{{option.value}}</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="control-label w100">Sezione</label>
+                    <div class="btn-group" ng-include="'client/components/things.section.buttons.ng.html'" > </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="control-label w100">Set</label>
+                    <div class="btn-group" ng-include="'client/components/things.set.buttons.ng.html'"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6" ng-hide="$state.current.name === 'widget-details-edit'">
+                    <input type="submit" value="Add" class="btn btn-primary"   ng-disabled="!form.$valid" />
+                 //FIXME nascondere pulsante ADD quando lo stato è in widget edit
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

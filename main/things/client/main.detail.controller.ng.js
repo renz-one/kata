@@ -30,6 +30,8 @@ angular.module('kataApp')
     }
 
 
+
+
     $scope.save = function () {
         if ($scope.form.$valid) {
             things.save($scope.thing).then(function(){

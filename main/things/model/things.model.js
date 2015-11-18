@@ -17,7 +17,7 @@ var thingSchema = new SimpleSchema({
     'sections':{type: sectionsSchema,optional:true,blackbox: true},
     'set': {type:String,optional:true,defaultValue:''},
     'publishType' :{ type:String,optional:true,defaultValue:false},
-    'dim':{ type:String,optional:true },
+    'publishDim':{ type:String,optional:true },
     'createdAt': { type: Date,optional:true}
 });
 
