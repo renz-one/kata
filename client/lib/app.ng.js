@@ -32,4 +32,38 @@ angular.module('kataApp')
             time: false,
             rooms: false
         };
+        $rootScope.thingTypes = [
+            { label: 'Istogramma',
+                value: 'chartwidget'},
+            { label: 'Progress Bar',
+                value: 'progresswidget'},
+            { label: 'Date Selector',
+                value: 'dateselectorwidget'},
+            { label: 'Form',
+                value: 'formwidget'},
+            { label: 'Griglia',
+                value: 'gridwidget'},
+            { label: 'Banner',
+                value: 'bannerwidget'},
+            { label: 'Grafico a torta',
+                value: 'piechartwidget'},
+            { label: 'Istogramma mensile',
+                value: 'monthchartwidget'}
+
+        ];
+
+        $rootScope.thingDims = [
+            { value: '1'},
+            { value: '2'},
+            { value: '3'},
+            { value: '4'},
+            { value: '5'},
+            { value: '6'},
+            { value: '7'},
+            { value: '8'},
+            { value: '9'},
+            { value: '10'},
+            { value: '11'},
+            { value: '12'}
+        ];
     })

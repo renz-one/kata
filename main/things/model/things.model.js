@@ -16,7 +16,7 @@ var thingSchema = new SimpleSchema({
     'publishState' :{ type:String,optional:true,defaultValue:'Inserito'},
     'sections':{type: sectionsSchema,optional:true,blackbox: true},
     'set': {type:String,optional:true,defaultValue:''},
-    'type':{ type:String,optional:true },
+    'publishType' :{ type:String,optional:true,defaultValue:false},
     'dim':{ type:String,optional:true },
     'createdAt': { type: Date,optional:true}
 });

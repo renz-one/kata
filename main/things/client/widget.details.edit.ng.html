@@ -59,10 +59,29 @@
 										<textarea rows="5" class="form-control" type="text" ng-model="thing.descEng"></textarea>
 									</div>
 								</div>
-                                <div class="row">
-                                    <div class="btn-group col-md-6" ng-include="'client/components/things.section.buttons.ng.html'" > </div>
-                                    <div class="btn-group col-md-6" ng-include="'client/components/things.set.buttons.ng.html'"></div>
-                                </div>
+
+								<div class="row">
+									<div class="col-md-3">
+										<label class="control-label">Tipo Widget</label>
+										<select class="form-control" ng-model="thing.publishType" required >
+											<option ng-repeat="option in thingTypes track by $index">{{option.label}}</option>
+										</select>
+									</div>
+									<div class="col-md-3">
+										<label class="control-label">Dimensione</label>
+										<select class="form-control" ng-model="thing.publishDim" required >
+											<option ng-repeat="option in thingDims track by $index">{{option.value}}</option>
+										</select>
+									</div>
+									<div class="col-md-3">
+										<label class="control-label w100">Sezione</label>
+										<div class="btn-group" ng-include="'client/components/things.section.buttons.ng.html'" > </div>
+									</div>
+									<div class="col-md-3">
+										<label class="control-label w100">Set</label>
+										<div class="btn-group" ng-include="'client/components/things.set.buttons.ng.html'"></div>
+									</div>
+								</div>
 							</div>
 						</form>
 					</div>

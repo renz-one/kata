@@ -14,8 +14,8 @@ angular.module('kataApp')
             },
             'set': null,
             'images': null,
-            'type': null,
-            'publishDim': '4',
+            'publishType': null,
+            'publishDim': '6',
             'createdAt': new Date()
         };
     }
