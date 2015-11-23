@@ -59,11 +59,14 @@
                     <div class="btn-group" ng-include="'client/components/things.set.buttons.ng.html'"></div>
                 </div>
             </div>
+            <div ng-controller="AddPhotoCtrl" class="row form-group">
+                <div class="btn-group col-md-12" ng-include="'client/components/things.imageuploader.ng.html'" > </div>
 
+            </div>
             <div class="row">
                 <div class="col-md-6" ng-hide="$state.current.name === 'widget-details-edit'">
                     <input type="submit" value="Add" class="btn btn-primary"   ng-disabled="!form.$valid" />
-                 //FIXME nascondere pulsante ADD quando lo stato è in widget edit
+
                 </div>
             </div>
 

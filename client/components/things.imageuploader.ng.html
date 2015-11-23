@@ -22,6 +22,19 @@
                     <img-crop image="imgSrc" result-image="myCroppedImage" area-type="square"></img-crop>
                 </div>
             </div>
+
+            <br />
+
+            <div layout="row" class="images-container-title">
+                <div class="party-image-container" ng-repeat="image in imageList">
+                    <img ng-src="{{ image.url() }}"/><br/>
+                </div>
+            </div>
+
+
         </div>
+
     </div>
 </md-whiteframe>
+
+

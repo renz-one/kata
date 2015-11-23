@@ -13,7 +13,7 @@ angular.module('kataApp')
                 'rooms' : false
             },
             'set': null,
-            'images': null,
+            'imagesList': null,
             'publishType': null,
             'publishDim': '6',
             'createdAt': new Date()
@@ -33,6 +33,14 @@ angular.module('kataApp')
 
 
     $scope.save = function () {
+        if ($scope.imagesList && $scope.imagesList.length > 0) {
+            $scope.thing.imagesList = [];
+
+            angular.forEach($scope.imagesList, function(image) {
+                $scope.thing.imagesList.push({id: image._id});
+            });
+        }
+
         if ($scope.form.$valid) {
             things.save($scope.thing).then(function(){
                 $state.go('widgets-list-view')
