@@ -63,7 +63,11 @@
                         <div style="cursor:pointer" ng-click="goToState('widget-overview',thing._id)"> {{ thing.publishDim }} </div>
                     </td>
                         <td>
-                            <div style="cursor:pointer" ng-click="goToState('widget-overview',thing._id)"> {{ thing.set }} </div>
+                            <div style="cursor:pointer" ng-click="goToState('widget-overview',thing._id)"> <img draggable="false" ng-src="{{ thing.image.url({store: 'thumbnail'}) }}"/> </div>
+
+
+
+
                         </td>
                     </tr>
                 </table>

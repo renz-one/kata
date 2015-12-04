@@ -1,6 +1,6 @@
 'use strict'
 angular.module('kataApp')
-.controller('MainDetailCtrl', function ($rootScope,$scope, $meteor, $log, $state, $stateParams) {
+.controller('MainDetailCtrl', function ($rootScope,$scope, $meteor, $log, $state, $stateParams,$filter) {
     var newThing = function(){
         return {
             'name' :null,
@@ -52,5 +52,15 @@ angular.module('kataApp')
         $state.go(state,{thingid:id})
     };
 
+
+    $scope.getMainImage = function(images) {
+        if (images && images.length && images[0] && images[0].id) {
+            var url = $filter('filter')($scope.images, {_id: images[0].id})[0].url();
+
+            return {
+                'background-image': 'url("' + url + '")'
+            }
+        }
+    };
 
 });
