@@ -2,16 +2,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-
-				<div ng-if="thing.images && thing.images.length > 0"
-					 ng-style="getMainImage(thing.images)"
-					 class="thing-image">
-				</div>
-
+				<img ng-src="http://customercare.developers.tmp/servicehub/images/graphs/{{thing.name}}.jpg" alt="{{thing.name}}.jpg" style="max-width: 560px ; max-height:350px"/>
 			</div>
 			<div class="col-md-6">
 				<h1>{{thing.nameIta}}</h1>
-				<h3>Codice: {{thing.name}}</h3>
+				<h3>Code: {{thing.name}}</h3>
 				<p>{{thing.descIta}}</p>
 				<br>
 

@@ -50,19 +50,23 @@
                         <option ng-repeat="option in thingDims track by $index">{{option.value}}</option>
                     </select>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <label class="control-label w100">Sezione</label>
                     <div class="btn-group" ng-include="'client/components/things.section.buttons.ng.html'" > </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <label class="control-label w100">Set</label>
                     <div class="btn-group" ng-include="'client/components/things.set.buttons.ng.html'"></div>
                 </div>
             </div>
+
+            <!-- DROPZONE PER L'UTILIZZO DI COLLECTIONFS, SI E' PREFERITO IL LINK DIRETTO ALL'IMMAGINE
             <div ng-controller="AddPhotoCtrl" class="row form-group">
                 <div class="btn-group col-md-12" ng-include="'client/components/things.imageuploader.ng.html'" > </div>
 
             </div>
+            -->
+
             <div class="row">
                 <div class="col-md-6" ng-hide="$state.current.name === 'widget-details-edit'">
                     <input type="submit" value="Add" class="btn btn-primary"   ng-disabled="!form.$valid" />

@@ -10,7 +10,8 @@ angular.module('kataApp')
                 'pax' : false,
                 'geo' : false,
                 'time' : false,
-                'rooms' : false
+                'rooms' : false,
+                'overview' : false
             },
             'set': null,
             'imagesList': null,

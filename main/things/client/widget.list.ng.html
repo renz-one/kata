@@ -1,7 +1,7 @@
 <div container>
     <div class="panel panel-default">
         <div class="panel-body">
-            <div class="col-lg-12 col-md-12">Numero totale dei widgets nel catalogo: {{thingsCount.count}}</div>
+            <div class="col-lg-12 col-md-12">Total number of widgets in the catalog: {{thingsCount.count}}</div>
             <div class="row"></div>
             <dir-pagination-controls on-page-change="pageChanged(newPageNumber)" direction-links="true" boundary-links="true" class="col-md-12" max-size="5" ></dir-pagination-controls>
 
@@ -20,7 +20,7 @@
                         <th>SET</th>
                         <th>STATE</th>
                         <th>TYPE</th>
-                        <th>DIMENSION</th>
+                        <th>DIM</th>
                         <th>THUMB</th>
                     </tr>
 
@@ -48,6 +48,7 @@
                                 <span ng-if="thing.sections.geo">Geo</span>
                                 <span ng-if="thing.sections.time">Time</span>
                                 <span ng-if="thing.sections.rooms">Rooms</span>
+                                <span ng-if="thing.sections.overview">Overview</span>
                             </div>
                         </td>
                         <td>
@@ -63,7 +64,7 @@
                         <div style="cursor:pointer" ng-click="goToState('widget-overview',thing._id)"> {{ thing.publishDim }} </div>
                     </td>
                         <td>
-                            <div style="cursor:pointer" ng-click="goToState('widget-overview',thing._id)"> <img draggable="false" ng-src="{{ thing.image.url({store: 'thumbnail'}) }}"/> </div>
+                            <div style="cursor:pointer" ng-click="goToState('widget-overview',thing._id)"> <img ng-src="http://customercare.developers.tmp/servicehub/images/graphs/{{thing.name}}.jpg" alt="{{thing.name}}.jpg" class="img-thumbnail" width="100" height="50"/> </div>
 
 
 
