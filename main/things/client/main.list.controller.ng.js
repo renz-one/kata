@@ -3,7 +3,7 @@
 angular.module('kataApp')
     .controller('MainListCtrl', function ($scope, $meteor, $log, $state, $stateParams) {
         $scope.page = 1;
-        $scope.perPage = 10;
+        $scope.perPage = 50;
         $scope.sort = {
             name: 1
         };
